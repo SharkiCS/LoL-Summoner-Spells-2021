@@ -1,6 +1,6 @@
 # About LoL Summoner Spells 2021
 
-Almost 3 years later from the last LoL Summoner Spell I have decided to create the same project from scratch, the old project code was certainly a mess unlike this one. I hope you enjoy it.
+Almost 3 years later from the last LoL Summoner Spell I have decided to create the same project from scratch, the old project code was certainly a mess unlike this one. A program to know the cooldown of enemy summoner spells. I hope you enjoy it.
 
 
 ![LoL Summoner Spells 2021](https://i.ibb.co/NVLWML9/index.png)
