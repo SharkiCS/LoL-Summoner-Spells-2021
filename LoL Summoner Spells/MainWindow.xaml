@@ -1,0 +1,52 @@
+﻿<Window x:Class="LoL_Summoner_Spells.MainWindow"       
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoL_Summoner_Spells"
+        mc:Ignorable="d"
+        Title="LoL Summoner Spells" Height="340" Width="550" Icon="ICOLOGO.png" Loaded="Window_Loaded">
+
+    <Grid Background="#292728">
+
+        <GroupBox Header="Settings" HorizontalAlignment="Left" Height="218" Margin="67,38,0,0" VerticalAlignment="Top" Width="400" Foreground="White" FontSize="16">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="129*"/>
+                    <RowDefinition Height="14*"/>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="25*"/>
+                </Grid.RowDefinitions>
+
+                <TextBox Name="Key" TextWrapping="NoWrap" AcceptsReturn="False" Foreground="White" HorizontalAlignment="Left" Height="30" Margin="17,32,0,0" Text="Ex: RGAPI-df4ae3d6-2438-4fc2-a0e3-dd02bd00f185" VerticalAlignment="Top" Width="359" Background="{x:Null}"/>
+                <Button Content="Start" HorizontalAlignment="Left" Margin="17,0,0,0" VerticalAlignment="Top" Width="359" RenderTransformOrigin="0.491,3.2" Background="#4C706E"
+                       FontFamily="CascadiaCode" Foreground="White" Height="32" Click="Button_Click" Grid.RowSpan="2" Grid.Row="2"/>
+                <TextBlock HorizontalAlignment="Left" Margin="17,11,0,0" TextWrapping="Wrap" Text="Riot Api Key:" VerticalAlignment="Top" Width="124" Foreground="White" FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" Margin="22,79,0,0" TextWrapping="Wrap" Text="Icon Size: " VerticalAlignment="Top" Width="124" Foreground="White" FontSize="14"/>
+
+                <Slider Name="SliderIconSize" HorizontalAlignment="Left" Margin="17,103,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.942,0.5" Value="60" Maximum="120" Minimum="30" Height="23"/>
+                <Slider Name="SliderSpacingSize" HorizontalAlignment="Left" Margin="230,104,0,0" VerticalAlignment="Top" Width="148" RenderTransformOrigin="0.942,0.5" Maximum="20" Value="5" SmallChange="1"/>
+
+
+                <TextBlock HorizontalAlignment="Left" Margin="235,79,0,0" TextWrapping="Wrap" Text="Spacing:" VerticalAlignment="Top" Width="124" Foreground="White" FontSize="14"/>
+                <Label ContentStringFormat="{}{0:#; #;0}" Content="{Binding ElementName=SliderIconSize, Path=Value}" HorizontalAlignment="Left" Margin="82,74,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="40" FontSize="14"/>
+                <Label ContentStringFormat="Prueba {}{0:#; #;0}" Content="{Binding ElementName=SliderSpacingSize, Path=Value}" HorizontalAlignment="Left" Margin="289,74,0,0" VerticalAlignment="Top" Foreground="White" Height="30" Width="36" RenderTransformOrigin="0.135,0.587" FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" Margin="249,16,0,0" TextWrapping="Wrap" Text="Get your Riot api key here" VerticalAlignment="Top" Width="131" Foreground="White" FontSize="11" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
+
+
+
+
+                <Image Source="/Images/twittericon2.png"  HorizontalAlignment="Left" Height="26" Margin="183,100,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.812,0.625" Stretch="Fill" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+            </Grid>
+        </GroupBox>
+
+        <TextBlock HorizontalAlignment="Left" Margin="12,278,0,0" TextWrapping="Wrap" Text="Summoner Name:" VerticalAlignment="Top" Width="124" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="443,278,0,0" TextWrapping="Wrap" Text="Status:" VerticalAlignment="Top" Width="38" Foreground="White" RenderTransformOrigin="0.711,-1.034"/>
+
+        <TextBlock Name="SummonerName" HorizontalAlignment="Left" Margin="112,278,0,0" TextWrapping="Wrap" Text="Unknown" VerticalAlignment="Top" Width="142" Foreground="red" Height="16"/>
+        <TextBlock Name="Status" HorizontalAlignment="Left" Margin="481,278,0,0" TextWrapping="Wrap" Text="Stopped" VerticalAlignment="Top" Width="54" Foreground="red" RenderTransformOrigin="0.711,-1.034"/>
+
+
+
+    </Grid>
+</Window>
