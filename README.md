@@ -10,13 +10,13 @@ Almost 3 years later from the last LoL Summoner Spell I have decided to create t
 
 The use is kinda simple.
 
-1. You need to have your League of legends game open.
+1. You need to have your League of Legends game open.
 2. Start the program.
-3. Wait for the program to detect your Summoner Name. It shouldn't take more than 5 secs.
-4. Get your [riot api key](https://developer.riotgames.com/) in their website and paste it in the field.
-5. Press start and wait for the status change to Running.
+3. Wait for the program to detect your Summoner Name. It shouldn't take more than 5 seconds.
+4. Get your [Riot api key](https://developer.riotgames.com/) in their website and paste it in the field.
+5. Press start and wait for the status to display "Running"
 
-Once you get the status running you just need to play. Every game it'll show an interfaces with the champions and their summoner spells.
+Once you get the status is running you just need to play. Every game it'll show an interface with the champions and their summoner spells.
 
 
 
