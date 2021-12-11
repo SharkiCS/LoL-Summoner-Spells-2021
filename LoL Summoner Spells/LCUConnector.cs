@@ -38,10 +38,9 @@ namespace LoL_Summoner_Spells
                 PASS = new Regex(@"--remoting-auth-token=([\w-]+)").Matches(lockfile)[0].Groups[1].ToString();
                 Region = new Regex(@"--region=([\w-]+)").Matches(lockfile)[0].Groups[1].ToString();
 
-                Region = Region.ToLower();
-                Region = Region.First().ToString().ToUpper() + String.Join("", Region.Skip(1));
-                Console.WriteLine(Region);
-
+                if (Region == "LA2")  Region = "Las";
+                else Region = Region.ToLower().First().ToString().ToUpper() + String.Join("", Region.Skip(1));
+                
                 URL = protocol + "://" + LHOST + ":" + LPORT;
 
             }
